@@ -1,28 +1,17 @@
 describe('Hacer pedido en la aplicación Ride Customer Dev', () => {
   beforeEach(() => {
-    // La dirección de la página de inicio de sesión
     cy.visit('https://ride-customer-dev.web.app/login');
   });
 
   it('Iniciar sesión con éxito', () => {
-    // Los selectores dependen de la estructura HTML de tu página
-    // Asegúrate de reemplazarlos con los correctos para tu página
 
-    // Ingresar el nombre de usuario
     cy.get('input[name=email]').type('pollolandiasolutions@gmail.com');
 
-    // Ingresar la contraseña
     cy.get('input[name=password]').type('pollo12345');
 
-    // Hacer clic en el botón de inicio de sesión
     cy.get('#loginB').click();
 
-    // Verificar que la página de inicio de sesión ya no es visible
-    // (suponiendo que el usuario es redirigido a otra página después de iniciar sesión con éxito)
     cy.url().should('not.include', '/login');
-
-    // Comprobar que el inicio de sesión fue exitoso
-    // (puedes verificar la presencia de un elemento específico que solo aparece después del inicio de sesión)
 
     cy.get('#mainContent > app-home > ion-content > div > ion-card:nth-child(1) > img').click();
 
