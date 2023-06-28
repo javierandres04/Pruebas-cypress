@@ -25,7 +25,7 @@ describe('Iniciar sesión en la aplicación Ride Customer Dev', () => {
     cy.get('body').click(310, 10);
 
     // Cambiar por el codigo del pedido que se desea calificar, si ya esta calificado no se podra calificar
-    cy.contains('Pedido: lnzW').click();
+    cy.contains('Pedido: WU5U').click();
     
     cy.get('#rate-button').click();
 

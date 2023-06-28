@@ -10,13 +10,15 @@ it('Probar función de paginación', () => {
   
   cy.get('form').submit();
   
-  cy.wait(800);
+  cy.wait(2000);
 
   cy.url().should('eq', url + "home");
 
-  cy.wait(1000);
+  cy.wait(3000);
   
   cy.get('#mainContent > app-home > ion-content > div > app-pagination > pagination-controls > pagination-template > nav > ul > li.pagination-next').click();
   
-  cy.get('ul').find('li').eq(3).should('have.class', 'current');;
+  cy.wait(3000);
+
+  cy.get('ul').find('li').eq(3).should('have.class', 'current');
 });

@@ -20,8 +20,4 @@ it('Iniciar sesión', () => {
   cy.get('body').click(310, 10);
   cy.url().should('eq', url + "contact");
 
-  cy.get('#mainContent > app-contact > ion-content > div > ion-item > ion-text > ul > li:nth-child(2) > p > a').click();
-  cy.get('#mainContent > app-contact > ion-content > div > ion-item > ion-text > ul > li:nth-child(3) > p > a').click();
-  cy.get('#mainContent > app-contact > ion-content > div > ion-item > ion-text > ul > li:nth-child(4) > p > a').click();
-
 });

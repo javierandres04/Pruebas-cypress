@@ -5,6 +5,7 @@ describe('Hacer pedido en la aplicación Ride Customer Dev', () => {
 
   it('Iniciar sesión con éxito', () => {
 
+
     cy.get('input[name=email]').type('pollolandiasolutions@gmail.com');
 
     cy.get('input[name=password]').type('pollo12345');
